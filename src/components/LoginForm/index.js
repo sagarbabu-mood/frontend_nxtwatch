@@ -51,16 +51,23 @@ class LoginForm extends Component {
     event.preventDefault()
     const {username, password} = this.state
     const userDetails = {username, password}
-    const url = 'https://apis.ccbp.in/login'
+    const url = 'https://sagar-nxtwatch-backend.onrender.com/login'
     const options = {
       method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
       body: JSON.stringify(userDetails),
     }
+    console.log(options, url)
     const response = await fetch(url, options)
-    const data = await response.json()
+
     if (response.ok === true) {
+      const data = await response.json()
       this.onSubmitSuccess(data.jwt_token)
     } else {
+      const data = await response.text()
       this.onSubmitFailure(data.error_msg)
     }
   }

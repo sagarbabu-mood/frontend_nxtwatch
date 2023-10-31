@@ -198,23 +198,20 @@ class Header extends Component {
                   )}
                 </Popup>
 
-                <ProfileImageButton type="button" isDarkTheme={isDarkTheme}>
-                  <ProfileImage
-                    src="https://assets.ccbp.in/frontend/react-js/nxt-watch-profile-img.png"
-                    alt="profile"
-                  />
-                </ProfileImageButton>
+                <ProfileImage
+                  src="https://assets.ccbp.in/frontend/react-js/nxt-watch-profile-img.png"
+                  alt="profile"
+                />
                 <Popup
                   modal
                   trigger={
-                    <div>
-                      <LogoutImageButton
-                        type="button"
-                        isDarkTheme={isDarkTheme}
-                      >
-                        <FiLogOut />
-                      </LogoutImageButton>
-                    </div>
+                    <LogoutImageButton
+                      role="button"
+                      type="button"
+                      isDarkTheme={isDarkTheme}
+                    >
+                      <FiLogOut />
+                    </LogoutImageButton>
                   }
                   className="popup-content"
                 >
@@ -244,11 +241,13 @@ class Header extends Component {
                 <Popup
                   modal
                   trigger={
-                    <div>
-                      <LogoutButton type="button" isDarkTheme={isDarkTheme}>
-                        Logout
-                      </LogoutButton>
-                    </div>
+                    <LogoutButton
+                      role="button"
+                      type="button"
+                      isDarkTheme={isDarkTheme}
+                    >
+                      Logout
+                    </LogoutButton>
                   }
                   className="popup-content"
                 >

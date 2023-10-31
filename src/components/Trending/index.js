@@ -37,7 +37,7 @@ class Trending extends Component {
     this.setState({apiStatus: apiStatusConstants.inProgress})
     const jwtToken = Cookies.get('jwt_token')
 
-    const apiUrl = `https://apis.ccbp.in/videos/trending`
+    const apiUrl = `https://sagar-nxtwatch-backend.onrender.com/trending`
     const options = {
       method: 'GET',
       headers: {Authorization: `Bearer ${jwtToken}`},

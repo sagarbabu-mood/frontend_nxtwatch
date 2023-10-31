@@ -71,12 +71,17 @@ export const ProfileImage = styled.img`
   width: 35px;
   height: 35px;
   margin: 0 10px 10px 10px;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 `
 
 export const LogoutImageButton = styled.button`
   background-color: transparent;
   border: 0;
   font-size: 20px;
+  display: flex;
   color: ${props => (props.isDarkTheme ? '#ffffff' : '#0f0f0f')};
   @media screen and (min-width: 576px) {
     font-size: 30px;

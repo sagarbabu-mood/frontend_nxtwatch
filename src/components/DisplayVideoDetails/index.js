@@ -96,6 +96,7 @@ const DisplayVideoDetails = props => {
                 </ViewsAndPublishedContainer>
                 <ButtonsContainer>
                   <Button
+                    type="button"
                     onClick={() => likeVideo(videoDetails)}
                     fontColor={isLiked ? '#2563eb' : '#64748b'}
                   >
@@ -103,6 +104,7 @@ const DisplayVideoDetails = props => {
                     Like
                   </Button>
                   <Button
+                    type="button"
                     fontColor={isDisLiked ? '#2563eb' : '#64748b'}
                     onClick={() => dislikeVideo(videoDetails)}
                   >
@@ -110,6 +112,7 @@ const DisplayVideoDetails = props => {
                     Dislike
                   </Button>
                   <Button
+                    type="button"
                     fontColor={isSaved === 'Saved' ? '#2563eb' : '#64748b'}
                     onClick={onClickSaveButton}
                   >

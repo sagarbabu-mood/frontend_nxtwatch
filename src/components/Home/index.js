@@ -55,10 +55,14 @@ class Home extends Component {
     const jwtToken = Cookies.get('jwt_token')
     const {searchInput} = this.state
 
-    const apiUrl = `https://apis.ccbp.in/videos/all?search=${searchInput}`
+    const apiUrl = `https://sagar-nxtwatch-backend.onrender.com/?search=${searchInput}`
     const options = {
       method: 'GET',
-      headers: {Authorization: `Bearer ${jwtToken}`},
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        Authorization: `Bearer ${jwtToken}`,
+      },
     }
 
     const response = await fetch(apiUrl, options)
@@ -75,6 +79,7 @@ class Home extends Component {
         publishedAt: eachVideo.published_at,
         viewCount: eachVideo.view_count,
       }))
+      console.log(data)
       this.setState({
         homeVideos: formattedData,
         apiStatus: apiStatusConstants.success,

@@ -37,7 +37,7 @@ class Gaming extends Component {
     this.setState({apiStatus: apiStatusConstants.inProgress})
     const jwtToken = Cookies.get('jwt_token')
 
-    const apiUrl = `https://apis.ccbp.in/videos/gaming`
+    const apiUrl = `https://sagar-nxtwatch-backend.onrender.com/gaming`
     const options = {
       method: 'GET',
       headers: {Authorization: `Bearer ${jwtToken}`},
