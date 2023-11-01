@@ -35,7 +35,7 @@ class VideoItemDetails extends Component {
     const {params} = match
     const {id} = params
     const jwtToken = Cookies.get('jwt_token')
-    const apiUrl = `https://apis.ccbp.in/videos/${id}`
+    const apiUrl = `https://sagar-nxtwatch-backend.onrender.com/videos/${id}`
     const options = {
       method: 'GET',
       headers: {Authorization: `Bearer ${jwtToken}`},

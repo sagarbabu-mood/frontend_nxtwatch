@@ -44,6 +44,7 @@ class Home extends Component {
     display: 'flex',
     searchInput: '',
     apiStatus: apiStatusConstants.initial,
+    homeVideos: [],
   }
 
   componentDidMount() {
@@ -55,7 +56,7 @@ class Home extends Component {
     const jwtToken = Cookies.get('jwt_token')
     const {searchInput} = this.state
 
-    const apiUrl = `https://sagar-nxtwatch-backend.onrender.com/?search=${searchInput}`
+    const apiUrl = `https://sagar-nxtwatch-backend.onrender.com/all?search=${searchInput}`
     const options = {
       method: 'GET',
       headers: {
@@ -79,7 +80,6 @@ class Home extends Component {
         publishedAt: eachVideo.published_at,
         viewCount: eachVideo.view_count,
       }))
-      console.log(data)
       this.setState({
         homeVideos: formattedData,
         apiStatus: apiStatusConstants.success,

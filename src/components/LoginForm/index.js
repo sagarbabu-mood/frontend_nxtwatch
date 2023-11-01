@@ -60,7 +60,6 @@ class LoginForm extends Component {
       },
       body: JSON.stringify(userDetails),
     }
-    console.log(options, url)
     const response = await fetch(url, options)
 
     if (response.ok === true) {
@@ -68,7 +67,8 @@ class LoginForm extends Component {
       this.onSubmitSuccess(data.jwt_token)
     } else {
       const data = await response.text()
-      this.onSubmitFailure(data.error_msg)
+      console.log(data)
+      this.onSubmitFailure(data)
     }
   }
 

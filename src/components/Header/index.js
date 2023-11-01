@@ -19,7 +19,6 @@ import {
   IconsContainer,
   ThemeButton,
   HamburgerButton,
-  ProfileImageButton,
   ProfileImage,
   LogoutImageButton,
   LogoutButton,
