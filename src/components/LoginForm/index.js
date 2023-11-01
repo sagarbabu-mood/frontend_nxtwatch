@@ -114,7 +114,7 @@ class LoginForm extends Component {
                     value={username}
                     onChange={this.onChangeUsername}
                     type="text"
-                    placeholder="Username"
+                    placeholder="Username: sagar"
                     isDarkTheme={isDarkTheme === true}
                   />
                 </LabelAndInputContainer>
@@ -128,7 +128,7 @@ class LoginForm extends Component {
                   <LoginInput
                     id="password"
                     type={passwordOrText}
-                    placeholder="Password"
+                    placeholder="Password: ramsagar"
                     value={password}
                     onChange={this.onChangePassword}
                     isDarkTheme={isDarkTheme === true}
