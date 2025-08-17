@@ -1,5 +1,3 @@
-### **Published URL** : https://sagar-mern-stack-app.vercel.app/
-
 In this assignment let's build an **Nxt Watch** by applying the concepts we have learned till now.
 
 ### Refer to videos below:
